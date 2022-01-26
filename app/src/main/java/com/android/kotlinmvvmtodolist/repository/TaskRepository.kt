@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import com.android.kotlinmvvmtodolist.database.TaskDao
 import com.android.kotlinmvvmtodolist.database.TaskEntry
 
-class TaskRepository(val taskDao: TaskDao) {
+class TaskRepository(private val taskDao: TaskDao) {
 
     suspend fun insert(taskEntry: TaskEntry) = taskDao.insert(taskEntry)
 
