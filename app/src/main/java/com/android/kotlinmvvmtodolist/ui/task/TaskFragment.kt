@@ -89,7 +89,6 @@ class TaskFragment : Fragment() {
                 currentFocusedView?.windowToken, InputMethodManager.HIDE_NOT_ALWAYS
             )
         }
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -108,7 +107,6 @@ class TaskFragment : Fragment() {
                }
                 return true
             }
-
         })
     }
 
