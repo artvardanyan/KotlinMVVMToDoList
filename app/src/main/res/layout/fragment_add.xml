@@ -15,10 +15,16 @@
 
         <EditText
             android:id="@+id/edt_task"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="10dp"
+            android:paddingStart="16dp"
+            android:textSize="24sp"
             android:ems="10"
+            android:background="@drawable/background_edittext"
             android:hint="@string/enter_task"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,8 +35,10 @@
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginTop="16dp"
             android:entries="@array/priorities"
             app:layout_constraintEnd_toEndOf="parent"
@@ -40,10 +48,16 @@
 
         <Button
             android:id="@+id/btn_add"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/add"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/background_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
