@@ -1,12 +1,18 @@
 package com.android.kotlinmvvmtodolist.ui.task
 
+import android.content.Context
+import android.media.Image
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.android.kotlinmvvmtodolist.R
 import com.android.kotlinmvvmtodolist.database.TaskEntry
 import com.android.kotlinmvvmtodolist.databinding.RowLayoutBinding
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 
 class TaskAdapter(private val clickListener: TaskClickListener) :
     ListAdapter<TaskEntry, TaskAdapter.ViewHolder>(TaskDiffCallback) {
@@ -24,6 +30,11 @@ class TaskAdapter(private val clickListener: TaskClickListener) :
             binding.taskEntry = taskEntry
             binding.clickListener = clickListener
             binding.executePendingBindings()
+
+            Glide.with(itemView)
+                .load(taskEntry.image)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(binding.imageAv)
         }
     }
 

@@ -45,7 +45,8 @@ class UpdateFragment : Fragment() {
                     args.taskEntry.id,
                     task_str.toString(),
                     priority,
-                    args.taskEntry.timestamp
+                    args.taskEntry.timestamp,
+                    R.drawable.ic_search
                 )
 
                 viewModel.update(taskEntry)
