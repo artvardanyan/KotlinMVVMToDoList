@@ -26,13 +26,16 @@ class TaskAdapter(private val clickListener: TaskClickListener) :
 
     class ViewHolder(val binding: RowLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
 
+        private var task: TaskEntry? = null
+
         fun bind(taskEntry: TaskEntry, clickListener: TaskClickListener) {
             binding.taskEntry = taskEntry
             binding.clickListener = clickListener
             binding.executePendingBindings()
 
+            task = taskEntry
             Glide.with(itemView)
-                .load(taskEntry.image)
+                .load(task?.image)
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .into(binding.imageAv)
         }

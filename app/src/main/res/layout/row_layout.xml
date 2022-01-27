@@ -31,6 +31,7 @@
                 android:id="@+id/image_av"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
