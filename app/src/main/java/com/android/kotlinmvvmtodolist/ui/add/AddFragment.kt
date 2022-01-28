@@ -36,7 +36,7 @@ class AddFragment : Fragment() {
         binding.apply {
             spinner.adapter = myAdapter
             btnAdd.setOnClickListener {
-                if(TextUtils.isEmpty((edtTask.text))){
+                if (TextUtils.isEmpty((edtTask.text))) {
                     Toast.makeText(requireContext(), "It's empty!", Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
