@@ -30,7 +30,7 @@ class TaskAdapter(private val clickListener: TaskClickListener) :
 
         fun bind(taskEntry: TaskEntry, clickListener: TaskClickListener) {
 
-            binding.let { 
+            binding.let {
                 it.taskEntry = taskEntry
                 it.clickListener = clickListener
                 it.executePendingBindings()
