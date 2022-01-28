@@ -49,7 +49,7 @@ class AddFragment : Fragment() {
                     title_str,
                     priority,
                     System.currentTimeMillis(),
-                    R.drawable.ic_search
+                    0
                 )
 
                 viewModel.insert(taskEntry)
