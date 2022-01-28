@@ -24,14 +24,17 @@ class TaskAdapter(private val clickListener: TaskClickListener) :
         override fun areContentsTheSame(oldItem: TaskEntry, newItem: TaskEntry) = oldItem == newItem
     }
 
-    class ViewHolder(val binding: RowLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(private val binding: RowLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
 
         private var task: TaskEntry? = null
 
         fun bind(taskEntry: TaskEntry, clickListener: TaskClickListener) {
-            binding.taskEntry = taskEntry
-            binding.clickListener = clickListener
-            binding.executePendingBindings()
+
+            binding.let { 
+                it.taskEntry = taskEntry
+                it.clickListener = clickListener
+                it.executePendingBindings()
+            }
 
             task = taskEntry
             Glide.with(itemView)
