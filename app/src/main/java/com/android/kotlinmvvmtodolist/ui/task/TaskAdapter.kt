@@ -36,6 +36,7 @@ class TaskAdapter(private val clickListener: TaskClickListener) :
                 it.executePendingBindings()
             }
 
+
             task = taskEntry
             Glide.with(itemView)
                 .load(task?.image)
